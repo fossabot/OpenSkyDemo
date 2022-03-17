@@ -1,0 +1,740 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		ED110D9327E27913006733DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED110D9227E27913006733DC /* AppDelegate.swift */; };
+		ED110D9527E27913006733DC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED110D9427E27913006733DC /* SceneDelegate.swift */; };
+		ED110D9727E27913006733DC /* StatesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED110D9627E27913006733DC /* StatesViewController.swift */; };
+		ED110D9A27E27913006733DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED110D9827E27913006733DC /* Main.storyboard */; };
+		ED110D9C27E27914006733DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED110D9B27E27914006733DC /* Assets.xcassets */; };
+		ED110D9F27E27914006733DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED110D9D27E27914006733DC /* LaunchScreen.storyboard */; };
+		ED110DAA27E27915006733DC /* OpenSkyDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED110DA927E27915006733DC /* OpenSkyDemoTests.swift */; };
+		ED110DC427E27C75006733DC /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = ED110DC327E27C75006733DC /* RxBlocking */; };
+		ED110DC627E27C75006733DC /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = ED110DC527E27C75006733DC /* RxCocoa */; };
+		ED110DC827E27C75006733DC /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = ED110DC727E27C75006733DC /* RxRelay */; };
+		ED110DCA27E27C75006733DC /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = ED110DC927E27C75006733DC /* RxSwift */; };
+		ED110DCC27E27C75006733DC /* RxTest in Frameworks */ = {isa = PBXBuildFile; productRef = ED110DCB27E27C75006733DC /* RxTest */; };
+		ED110DD027E27DDA006733DC /* StateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED110DCF27E27DDA006733DC /* StateModel.swift */; };
+		ED110DD327E27E2F006733DC /* OpenSkyAPIProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED110DD227E27E2F006733DC /* OpenSkyAPIProtocol.swift */; };
+		ED110DD527E27E50006733DC /* StatesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED110DD427E27E50006733DC /* StatesResponse.swift */; };
+		ED363D0E27E2FD3500D8178E /* StateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED363D0D27E2FD3500D8178E /* StateCell.swift */; };
+		ED363D1027E30FE600D8178E /* StatesMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED363D0F27E30FE600D8178E /* StatesMapView.swift */; };
+		ED363D1327E3115A00D8178E /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = ED363D1227E3115A00D8178E /* SnapKit */; };
+		ED363D1527E31C4C00D8178E /* OpenSkyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED363D1427E31C4C00D8178E /* OpenSkyViewController.swift */; };
+		ED65BE5527E3745A00050B9B /* OpenSkyMapViewUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED65BE5427E3745A00050B9B /* OpenSkyMapViewUtils.swift */; };
+		ED65BE5727E3B14C00050B9B /* UIImage+Rotate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED65BE5627E3B14C00050B9B /* UIImage+Rotate.swift */; };
+		ED65BE5A27E3B23800050B9B /* FontAwesome in Frameworks */ = {isa = PBXBuildFile; productRef = ED65BE5927E3B23800050B9B /* FontAwesome */; };
+		ED65BE5D27E3C28900050B9B /* Quick in Frameworks */ = {isa = PBXBuildFile; productRef = ED65BE5C27E3C28900050B9B /* Quick */; };
+		ED65BE6027E3C29E00050B9B /* Nimble in Frameworks */ = {isa = PBXBuildFile; productRef = ED65BE5F27E3C29E00050B9B /* Nimble */; };
+		ED65BE6227E3D4E100050B9B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = ED65BE6127E3D4E100050B9B /* README.md */; };
+		ED83A45327E2919300793E95 /* StatesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED83A45227E2919300793E95 /* StatesViewModel.swift */; };
+		ED83A45627E29A7200793E95 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED83A45527E29A7200793E95 /* Logger.swift */; };
+		ED83A45927E29BED00793E95 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = ED83A45827E29BED00793E95 /* Alamofire */; };
+		ED83A45B27E29FDB00793E95 /* OpenSkyAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED83A45A27E29FDB00793E95 /* OpenSkyAPI.swift */; };
+		ED83A45F27E2A06F00793E95 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED83A45E27E2A06F00793E95 /* Constants.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		ED110DA627E27915006733DC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ED110D8727E27913006733DC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ED110D8E27E27913006733DC;
+			remoteInfo = OpenSkyDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		ED110D8F27E27913006733DC /* OpenSkyDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenSkyDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED110D9227E27913006733DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		ED110D9427E27913006733DC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		ED110D9627E27913006733DC /* StatesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatesViewController.swift; sourceTree = "<group>"; };
+		ED110D9927E27913006733DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		ED110D9B27E27914006733DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		ED110D9E27E27914006733DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		ED110DA027E27914006733DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED110DA527E27915006733DC /* OpenSkyDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpenSkyDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED110DA927E27915006733DC /* OpenSkyDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenSkyDemoTests.swift; sourceTree = "<group>"; };
+		ED110DB327E27915006733DC /* OpenSkyDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenSkyDemoUITests.swift; sourceTree = "<group>"; };
+		ED110DB527E27915006733DC /* OpenSkyDemoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenSkyDemoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		ED110DCF27E27DDA006733DC /* StateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateModel.swift; sourceTree = "<group>"; };
+		ED110DD227E27E2F006733DC /* OpenSkyAPIProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenSkyAPIProtocol.swift; sourceTree = "<group>"; };
+		ED110DD427E27E50006733DC /* StatesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatesResponse.swift; sourceTree = "<group>"; };
+		ED363D0D27E2FD3500D8178E /* StateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateCell.swift; sourceTree = "<group>"; };
+		ED363D0F27E30FE600D8178E /* StatesMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatesMapView.swift; sourceTree = "<group>"; };
+		ED363D1427E31C4C00D8178E /* OpenSkyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenSkyViewController.swift; sourceTree = "<group>"; };
+		ED65BE5427E3745A00050B9B /* OpenSkyMapViewUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenSkyMapViewUtils.swift; sourceTree = "<group>"; };
+		ED65BE5627E3B14C00050B9B /* UIImage+Rotate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Rotate.swift"; sourceTree = "<group>"; };
+		ED65BE6127E3D4E100050B9B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		ED83A45227E2919300793E95 /* StatesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatesViewModel.swift; sourceTree = "<group>"; };
+		ED83A45527E29A7200793E95 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		ED83A45A27E29FDB00793E95 /* OpenSkyAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenSkyAPI.swift; sourceTree = "<group>"; };
+		ED83A45E27E2A06F00793E95 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ED110D8C27E27913006733DC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED110DCA27E27C75006733DC /* RxSwift in Frameworks */,
+				ED83A45927E29BED00793E95 /* Alamofire in Frameworks */,
+				ED110DC827E27C75006733DC /* RxRelay in Frameworks */,
+				ED110DC627E27C75006733DC /* RxCocoa in Frameworks */,
+				ED363D1327E3115A00D8178E /* SnapKit in Frameworks */,
+				ED65BE5A27E3B23800050B9B /* FontAwesome in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED110DA227E27915006733DC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED65BE5D27E3C28900050B9B /* Quick in Frameworks */,
+				ED65BE6027E3C29E00050B9B /* Nimble in Frameworks */,
+				ED110DCC27E27C75006733DC /* RxTest in Frameworks */,
+				ED110DC427E27C75006733DC /* RxBlocking in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		ED110D8627E27913006733DC = {
+			isa = PBXGroup;
+			children = (
+				ED65BE6127E3D4E100050B9B /* README.md */,
+				ED110D9127E27913006733DC /* OpenSkyDemo */,
+				ED110DA827E27915006733DC /* OpenSkyDemoTests */,
+				ED110DB227E27915006733DC /* OpenSkyDemoUITests */,
+				ED110D9027E27913006733DC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		ED110D9027E27913006733DC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ED110D8F27E27913006733DC /* OpenSkyDemo.app */,
+				ED110DA527E27915006733DC /* OpenSkyDemoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ED110D9127E27913006733DC /* OpenSkyDemo */ = {
+			isa = PBXGroup;
+			children = (
+				ED110D9227E27913006733DC /* AppDelegate.swift */,
+				ED110D9427E27913006733DC /* SceneDelegate.swift */,
+				ED83A45427E29A6700793E95 /* Utils */,
+				ED83A45127E2917900793E95 /* ViewModel */,
+				ED110DD127E27E13006733DC /* Network */,
+				ED110DCE27E27D7E006733DC /* Model */,
+				ED110DCD27E27D53006733DC /* ViewController */,
+				ED110D9827E27913006733DC /* Main.storyboard */,
+				ED110D9B27E27914006733DC /* Assets.xcassets */,
+				ED110D9D27E27914006733DC /* LaunchScreen.storyboard */,
+				ED110DA027E27914006733DC /* Info.plist */,
+			);
+			path = OpenSkyDemo;
+			sourceTree = "<group>";
+		};
+		ED110DA827E27915006733DC /* OpenSkyDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				ED110DA927E27915006733DC /* OpenSkyDemoTests.swift */,
+			);
+			path = OpenSkyDemoTests;
+			sourceTree = "<group>";
+		};
+		ED110DB227E27915006733DC /* OpenSkyDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				ED110DB327E27915006733DC /* OpenSkyDemoUITests.swift */,
+				ED110DB527E27915006733DC /* OpenSkyDemoUITestsLaunchTests.swift */,
+			);
+			path = OpenSkyDemoUITests;
+			sourceTree = "<group>";
+		};
+		ED110DCD27E27D53006733DC /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				ED110D9627E27913006733DC /* StatesViewController.swift */,
+				ED363D1427E31C4C00D8178E /* OpenSkyViewController.swift */,
+				ED363D0F27E30FE600D8178E /* StatesMapView.swift */,
+				ED65BE5427E3745A00050B9B /* OpenSkyMapViewUtils.swift */,
+				ED363D0D27E2FD3500D8178E /* StateCell.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		ED110DCE27E27D7E006733DC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				ED110DCF27E27DDA006733DC /* StateModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		ED110DD127E27E13006733DC /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				ED110DD227E27E2F006733DC /* OpenSkyAPIProtocol.swift */,
+				ED83A45A27E29FDB00793E95 /* OpenSkyAPI.swift */,
+				ED110DD427E27E50006733DC /* StatesResponse.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		ED83A45127E2917900793E95 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				ED83A45227E2919300793E95 /* StatesViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		ED83A45427E29A6700793E95 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				ED83A45527E29A7200793E95 /* Logger.swift */,
+				ED65BE5627E3B14C00050B9B /* UIImage+Rotate.swift */,
+				ED83A45E27E2A06F00793E95 /* Constants.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ED110D8E27E27913006733DC /* OpenSkyDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ED110DB927E27915006733DC /* Build configuration list for PBXNativeTarget "OpenSkyDemo" */;
+			buildPhases = (
+				ED110D8B27E27913006733DC /* Sources */,
+				ED110D8C27E27913006733DC /* Frameworks */,
+				ED110D8D27E27913006733DC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OpenSkyDemo;
+			packageProductDependencies = (
+				ED110DC527E27C75006733DC /* RxCocoa */,
+				ED110DC727E27C75006733DC /* RxRelay */,
+				ED110DC927E27C75006733DC /* RxSwift */,
+				ED83A45827E29BED00793E95 /* Alamofire */,
+				ED363D1227E3115A00D8178E /* SnapKit */,
+				ED65BE5927E3B23800050B9B /* FontAwesome */,
+			);
+			productName = OpenSkyDemo;
+			productReference = ED110D8F27E27913006733DC /* OpenSkyDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		ED110DA427E27915006733DC /* OpenSkyDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ED110DBC27E27915006733DC /* Build configuration list for PBXNativeTarget "OpenSkyDemoTests" */;
+			buildPhases = (
+				ED110DA127E27915006733DC /* Sources */,
+				ED110DA227E27915006733DC /* Frameworks */,
+				ED110DA327E27915006733DC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ED110DA727E27915006733DC /* PBXTargetDependency */,
+			);
+			name = OpenSkyDemoTests;
+			packageProductDependencies = (
+				ED110DC327E27C75006733DC /* RxBlocking */,
+				ED110DCB27E27C75006733DC /* RxTest */,
+				ED65BE5C27E3C28900050B9B /* Quick */,
+				ED65BE5F27E3C29E00050B9B /* Nimble */,
+			);
+			productName = OpenSkyDemoTests;
+			productReference = ED110DA527E27915006733DC /* OpenSkyDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ED110D8727E27913006733DC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1330;
+				LastUpgradeCheck = 1330;
+				TargetAttributes = {
+					ED110D8E27E27913006733DC = {
+						CreatedOnToolsVersion = 13.3;
+					};
+					ED110DA427E27915006733DC = {
+						CreatedOnToolsVersion = 13.3;
+						TestTargetID = ED110D8E27E27913006733DC;
+					};
+				};
+			};
+			buildConfigurationList = ED110D8A27E27913006733DC /* Build configuration list for PBXProject "OpenSkyDemo" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = ED110D8627E27913006733DC;
+			packageReferences = (
+				ED110DC227E27C75006733DC /* XCRemoteSwiftPackageReference "RxSwift" */,
+				ED83A45727E29BED00793E95 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				ED363D1127E3115A00D8178E /* XCRemoteSwiftPackageReference "SnapKit" */,
+				ED65BE5827E3B23800050B9B /* XCRemoteSwiftPackageReference "FontAwesome.swift" */,
+				ED65BE5B27E3C28900050B9B /* XCRemoteSwiftPackageReference "Quick" */,
+				ED65BE5E27E3C29E00050B9B /* XCRemoteSwiftPackageReference "Nimble" */,
+			);
+			productRefGroup = ED110D9027E27913006733DC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ED110D8E27E27913006733DC /* OpenSkyDemo */,
+				ED110DA427E27915006733DC /* OpenSkyDemoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ED110D8D27E27913006733DC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED110D9F27E27914006733DC /* LaunchScreen.storyboard in Resources */,
+				ED110D9C27E27914006733DC /* Assets.xcassets in Resources */,
+				ED65BE6227E3D4E100050B9B /* README.md in Resources */,
+				ED110D9A27E27913006733DC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED110DA327E27915006733DC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ED110D8B27E27913006733DC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED83A45327E2919300793E95 /* StatesViewModel.swift in Sources */,
+				ED363D1027E30FE600D8178E /* StatesMapView.swift in Sources */,
+				ED363D1527E31C4C00D8178E /* OpenSkyViewController.swift in Sources */,
+				ED83A45F27E2A06F00793E95 /* Constants.swift in Sources */,
+				ED110D9727E27913006733DC /* StatesViewController.swift in Sources */,
+				ED110DD327E27E2F006733DC /* OpenSkyAPIProtocol.swift in Sources */,
+				ED110DD527E27E50006733DC /* StatesResponse.swift in Sources */,
+				ED110DD027E27DDA006733DC /* StateModel.swift in Sources */,
+				ED65BE5527E3745A00050B9B /* OpenSkyMapViewUtils.swift in Sources */,
+				ED65BE5727E3B14C00050B9B /* UIImage+Rotate.swift in Sources */,
+				ED363D0E27E2FD3500D8178E /* StateCell.swift in Sources */,
+				ED110D9327E27913006733DC /* AppDelegate.swift in Sources */,
+				ED110D9527E27913006733DC /* SceneDelegate.swift in Sources */,
+				ED83A45627E29A7200793E95 /* Logger.swift in Sources */,
+				ED83A45B27E29FDB00793E95 /* OpenSkyAPI.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED110DA127E27915006733DC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED110DAA27E27915006733DC /* OpenSkyDemoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		ED110DA727E27915006733DC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ED110D8E27E27913006733DC /* OpenSkyDemo */;
+			targetProxy = ED110DA627E27915006733DC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		ED110D9827E27913006733DC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ED110D9927E27913006733DC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		ED110D9D27E27914006733DC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ED110D9E27E27914006733DC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		ED110DB727E27915006733DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		ED110DB827E27915006733DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		ED110DBA27E27915006733DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LS6GFD7GAS;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = OpenSkyDemo/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ferdinandurban.OpenSkyDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		ED110DBB27E27915006733DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LS6GFD7GAS;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = OpenSkyDemo/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ferdinandurban.OpenSkyDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		ED110DBD27E27915006733DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = T5N5Y2394N;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ferdinandurban.OpenSkyDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OpenSkyDemo.app/OpenSkyDemo";
+			};
+			name = Debug;
+		};
+		ED110DBE27E27915006733DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = T5N5Y2394N;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ferdinandurban.OpenSkyDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OpenSkyDemo.app/OpenSkyDemo";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ED110D8A27E27913006733DC /* Build configuration list for PBXProject "OpenSkyDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED110DB727E27915006733DC /* Debug */,
+				ED110DB827E27915006733DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ED110DB927E27915006733DC /* Build configuration list for PBXNativeTarget "OpenSkyDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED110DBA27E27915006733DC /* Debug */,
+				ED110DBB27E27915006733DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ED110DBC27E27915006733DC /* Build configuration list for PBXNativeTarget "OpenSkyDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED110DBD27E27915006733DC /* Debug */,
+				ED110DBE27E27915006733DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		ED110DC227E27C75006733DC /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		ED363D1127E3115A00D8178E /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		ED65BE5827E3B23800050B9B /* XCRemoteSwiftPackageReference "FontAwesome.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/thii/FontAwesome.swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		ED65BE5B27E3C28900050B9B /* XCRemoteSwiftPackageReference "Quick" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Quick/Quick.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		ED65BE5E27E3C29E00050B9B /* XCRemoteSwiftPackageReference "Nimble" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Quick/Nimble.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		ED83A45727E29BED00793E95 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		ED110DC327E27C75006733DC /* RxBlocking */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ED110DC227E27C75006733DC /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxBlocking;
+		};
+		ED110DC527E27C75006733DC /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ED110DC227E27C75006733DC /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		ED110DC727E27C75006733DC /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ED110DC227E27C75006733DC /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		ED110DC927E27C75006733DC /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ED110DC227E27C75006733DC /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		ED110DCB27E27C75006733DC /* RxTest */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ED110DC227E27C75006733DC /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxTest;
+		};
+		ED363D1227E3115A00D8178E /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ED363D1127E3115A00D8178E /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		ED65BE5927E3B23800050B9B /* FontAwesome */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ED65BE5827E3B23800050B9B /* XCRemoteSwiftPackageReference "FontAwesome.swift" */;
+			productName = FontAwesome;
+		};
+		ED65BE5C27E3C28900050B9B /* Quick */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ED65BE5B27E3C28900050B9B /* XCRemoteSwiftPackageReference "Quick" */;
+			productName = Quick;
+		};
+		ED65BE5F27E3C29E00050B9B /* Nimble */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ED65BE5E27E3C29E00050B9B /* XCRemoteSwiftPackageReference "Nimble" */;
+			productName = Nimble;
+		};
+		ED83A45827E29BED00793E95 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ED83A45727E29BED00793E95 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = ED110D8727E27913006733DC /* Project object */;
+}
